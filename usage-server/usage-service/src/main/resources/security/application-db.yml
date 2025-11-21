@@ -1,0 +1,36 @@
+local-db:
+  postgres:
+    host: localhost
+    port: 5437
+    name: usage-service
+    username: donghyeon
+    password: adzc1973
+
+local-kafka:
+  bootstrap-servers: localhost:9092
+
+local-redis:
+    host: localhost
+    port: 6379
+
+dev-db:
+  postgres:
+    host: localhost
+    port: 5437
+    name: usage-service
+    username: ${POSTGRES_USER:donghyeon}
+    password: ${POSTGRES_PASSWORD:adzc1973}
+
+dev-kafka:
+  bootstrap-servers: localhost:9092
+
+prod-db:
+  postgres:
+    host: ${PROD_POSTGRES_HOST:prod-db}
+    port: ${PROD_POSTGRES_PORT:5432}
+    name: ${PROD_POSTGRES_DB:usage_server}
+    username: ${PROD_POSTGRES_USER:donghyeon}
+    password: ${PROD_POSTGRES_PASSWORD:adzc1973}
+
+prod-kafka:
+  bootstrap-servers: ${PROD_KAFKA_BOOTSTRAP:prod-kafka:9092}

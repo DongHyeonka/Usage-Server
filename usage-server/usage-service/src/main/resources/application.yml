@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: usage-server
+    
+  profiles:
+    default: local
+  config:
+    import: optional:classpath:security/application-db.yml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  metrics:
+    tags:
+      application: usage-server
+  prometheus:
+    metrics:
+      export:
+        enabled: true

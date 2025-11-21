@@ -1,0 +1,12 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://${local-db.postgres.host}:${local-db.postgres.port}/${local-db.postgres.name}
+    username: ${local-db.postgres.username}
+    password: ${local-db.postgres.password}
+  kafka:
+    bootstrap-servers: ${local-kafka.bootstrap-servers:localhost:9092}
+    consumer:
+      group-id: usage-server-local
+      auto-offset-reset: earliest
+    producer:
+      client-id: usage-server-local

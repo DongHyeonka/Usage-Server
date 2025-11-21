@@ -1,13 +1,13 @@
-package com.synapse.usage_server;
+package com.synapse.usage_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UsageServerApplication {
+public class UsageServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UsageServerApplication.class, args);
+		SpringApplication.run(UsageServiceApplication.class, args);
 	}
 
 }

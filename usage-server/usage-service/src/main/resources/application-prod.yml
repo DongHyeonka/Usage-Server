@@ -1,0 +1,20 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://${prod-db.postgres.host}:${prod-db.postgres.port}/${prod-db.postgres.name}
+    username: ${prod-db.postgres.username}
+    password: ${prod-db.postgres.password}
+  kafka:
+    bootstrap-servers: ${prod-kafka.bootstrap-servers:prod-kafka:9092}
+    consumer:
+      group-id: usage-server
+    producer:
+      client-id: usage-server
+
+management:
+  prometheus:
+    metrics:
+      export:
+        step: 60s
+        
+server:
+  shutdown: graceful

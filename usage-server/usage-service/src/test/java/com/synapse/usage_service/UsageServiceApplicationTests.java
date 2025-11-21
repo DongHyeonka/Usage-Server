@@ -1,10 +1,10 @@
-package com.synapse.usage_server;
+package com.synapse.usage_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UsageServerApplicationTests {
+class UsageServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
