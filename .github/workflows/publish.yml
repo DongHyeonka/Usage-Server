@@ -45,4 +45,4 @@ jobs:
           ./gradlew publish \
            -Pversion=${{ env.VERSION_TAG }} \
            -PGITHUB_USERNAME=${{ github.actor }} \
-           -PGITHUB_ACCOUNT_TOKEN=${{ secrets.GITHUB_TOKEN }}
+           -PGITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
